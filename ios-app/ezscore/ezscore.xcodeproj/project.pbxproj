@@ -14,6 +14,8 @@
 		291348E32271537200D436C6 /* ChooseTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291348E22271537200D436C6 /* ChooseTeamViewController.swift */; };
 		291348E522715C9000D436C6 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291348E422715C9000D436C6 /* TeamTableViewCell.swift */; };
 		29FF53C6227F9D38004F5800 /* TeamScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF53C5227F9D38004F5800 /* TeamScoreViewController.swift */; };
+		29FF53C8227FB229004F5800 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF53C7227FB229004F5800 /* Networking.swift */; };
+		816CF17D8E6D7BA541AEBE3C /* Pods_ezscore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC0E6484D5C6BCBCC0365B8 /* Pods_ezscore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		291348E22271537200D436C6 /* ChooseTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamViewController.swift; sourceTree = "<group>"; };
 		291348E422715C9000D436C6 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		29FF53C5227F9D38004F5800 /* TeamScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreViewController.swift; sourceTree = "<group>"; };
+		29FF53C7227FB229004F5800 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		2FC0E6484D5C6BCBCC0365B8 /* Pods_ezscore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ezscore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55CC5536A2ED4E02C0927263 /* Pods-ezscore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezscore.debug.xcconfig"; path = "Target Support Files/Pods-ezscore/Pods-ezscore.debug.xcconfig"; sourceTree = "<group>"; };
+		B02890E52101C47E28E49817 /* Pods-ezscore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ezscore.release.xcconfig"; path = "Target Support Files/Pods-ezscore/Pods-ezscore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816CF17D8E6D7BA541AEBE3C /* Pods_ezscore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				291348CF2271506400D436C6 /* ezscore */,
 				291348CE2271506400D436C6 /* Products */,
+				808C85BFE9AE09722665CE31 /* Pods */,
+				FC2CAA1E7F335990623EF699 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +75,26 @@
 				291348E22271537200D436C6 /* ChooseTeamViewController.swift */,
 				291348E422715C9000D436C6 /* TeamTableViewCell.swift */,
 				29FF53C5227F9D38004F5800 /* TeamScoreViewController.swift */,
+				29FF53C7227FB229004F5800 /* Networking.swift */,
 			);
 			path = ezscore;
+			sourceTree = "<group>";
+		};
+		808C85BFE9AE09722665CE31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55CC5536A2ED4E02C0927263 /* Pods-ezscore.debug.xcconfig */,
+				B02890E52101C47E28E49817 /* Pods-ezscore.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC2CAA1E7F335990623EF699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FC0E6484D5C6BCBCC0365B8 /* Pods_ezscore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 291348DF2271506600D436C6 /* Build configuration list for PBXNativeTarget "ezscore" */;
 			buildPhases = (
+				1B6659B5CC5E201B07B1372F /* [CP] Check Pods Manifest.lock */,
 				291348C92271506400D436C6 /* Sources */,
 				291348CA2271506400D436C6 /* Frameworks */,
 				291348CB2271506400D436C6 /* Resources */,
+				B28CBC1C28CF9E45F00167B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +164,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B6659B5CC5E201B07B1372F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ezscore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B28CBC1C28CF9E45F00167B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ezscore/Pods-ezscore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ezscore/Pods-ezscore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		291348C92271506400D436C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +219,7 @@
 				291348E522715C9000D436C6 /* TeamTableViewCell.swift in Sources */,
 				29FF53C6227F9D38004F5800 /* TeamScoreViewController.swift in Sources */,
 				291348D32271506400D436C6 /* ViewController.swift in Sources */,
+				29FF53C8227FB229004F5800 /* Networking.swift in Sources */,
 				291348E32271537200D436C6 /* ChooseTeamViewController.swift in Sources */,
 				291348D12271506400D436C6 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +357,7 @@
 		};
 		291348E02271506600D436C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CC5536A2ED4E02C0927263 /* Pods-ezscore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +375,7 @@
 		};
 		291348E12271506600D436C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B02890E52101C47E28E49817 /* Pods-ezscore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

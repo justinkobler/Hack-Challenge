@@ -1,0 +1,6 @@
+framework module Pods_ezscore {
+  umbrella header "Pods-ezscore-umbrella.h"
+
+  export *
+  module * { export * }
+}

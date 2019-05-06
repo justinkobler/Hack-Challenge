@@ -29,6 +29,12 @@ class TeamScoreViewController: UIViewController {
         scoreLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scoreLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         scoreLabel.heightAnchor.constraint(equalToConstant: scoreLabel.intrinsicContentSize.height).isActive = true
+        
+//        Network.getScore(teamID: 5) { score in
+//            // backend not working
+//            print(score.score)
+//            self.scoreLabel.text = score.score
+//        }
     }
     
 }
