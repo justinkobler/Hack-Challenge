@@ -13,7 +13,6 @@
 		291348DB2271506600D436C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291348D92271506600D436C6 /* LaunchScreen.storyboard */; };
 		291348E32271537200D436C6 /* ChooseTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291348E22271537200D436C6 /* ChooseTeamViewController.swift */; };
 		291348E522715C9000D436C6 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291348E422715C9000D436C6 /* TeamTableViewCell.swift */; };
-		29FF53C6227F9D38004F5800 /* TeamScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF53C5227F9D38004F5800 /* TeamScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		291348DC2271506600D436C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		291348E22271537200D436C6 /* ChooseTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamViewController.swift; sourceTree = "<group>"; };
 		291348E422715C9000D436C6 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
-		29FF53C5227F9D38004F5800 /* TeamScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				291348DC2271506600D436C6 /* Info.plist */,
 				291348E22271537200D436C6 /* ChooseTeamViewController.swift */,
 				291348E422715C9000D436C6 /* TeamTableViewCell.swift */,
-				29FF53C5227F9D38004F5800 /* TeamScoreViewController.swift */,
 			);
 			path = ezscore;
 			sourceTree = "<group>";
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				291348E522715C9000D436C6 /* TeamTableViewCell.swift in Sources */,
-				29FF53C6227F9D38004F5800 /* TeamScoreViewController.swift in Sources */,
 				291348D32271506400D436C6 /* ViewController.swift in Sources */,
 				291348E32271537200D436C6 /* ChooseTeamViewController.swift in Sources */,
 				291348D12271506400D436C6 /* AppDelegate.swift in Sources */,

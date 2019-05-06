@@ -12,8 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var tableView: UITableView!
     
-    var favoriteTeams = ["    Choose Favorite Team"]
-    var rivalTeams: [String] = ["    Choose Rival Team"]
+    var favoriteTeams = ["Choose Favorite Team"]
+    var rivalTeams: [String] = ["Choose Rival Team"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         view.backgroundColor = .white
         
-    
         tableView = UITableView(frame: .zero, style: .grouped)
-        
         tableView.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
@@ -57,35 +55,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let chooseTeamViewController = ChooseTeamViewController()
-            let navController = UINavigationController(rootViewController: chooseTeamViewController)
-            chooseTeamViewController.delegate = self
-            chooseTeamViewController.isRival = indexPath.section == 1
-            present(navController, animated: true, completion: nil)
-            tableView.deselectRow(at: indexPath, animated: true)
-        } else {
-            navigationController?.pushViewController(TeamScoreViewController(), animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-        
-        
-        
+        let chooseTeamViewController = ChooseTeamViewController()
+        chooseTeamViewController.delegate = self
+        chooseTeamViewController.isRival = indexPath.section == 1
+        present(chooseTeamViewController, animated: true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return " Favorite Teams"
+            return "Favorite Teams"
         } else {
-            return " Rival Teams"
+            return "Rival Teams"
         }
     }
     
@@ -98,25 +82,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
  
         return cell
-    }
-    
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if indexPath.row == 0 { return false }
-        
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            if indexPath.section == 0 {
-                favoriteTeams.remove(at: indexPath.row)
-            } else {
-                rivalTeams.remove(at: indexPath.row)
-            }
-            tableView.reloadData()
-        }
     }
 
 
